@@ -1,0 +1,273 @@
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    transition: background-color 0.3s;
+}
+
+.dark-mode {
+    background-color: #2c2c2c;
+    color: #f5f5f5;
+}
+
+header {
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.logo span {
+    font-size: 40px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+.nav-links li {
+    font-size: 20px;
+    margin-left: 20px;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 24px;
+    height: 20px;
+}
+
+.hamburger span {
+    width: 100%;
+    height: 3px;
+    background-color: black;
+}
+
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
+
+.rustscan {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+}
+
+.line {
+    width: 185px;
+    height: 3px;
+    background-color: #D9D9D9;
+    margin-bottom: 10px;
+}
+
+.rustscan h2 {
+    color: #747474;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.buttons button {
+    font-size: 20px;
+    border: 1px solid black;
+    background: transparent;
+    margin: 5px;
+    padding: 5px 10px;
+}
+
+label {
+    font-size: 20px;
+    align-self: flex-start;
+}
+
+.input-container {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+}
+
+.input-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 80%;
+}
+
+input {
+    width: 100%;
+    font-size: 20px;
+    border: 1px solid black;
+    padding: 5px;
+}
+
+/* Add gray color for the placeholder text */
+input::placeholder {
+    color: #999;
+}
+
+.file-upload-label {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.file-upload {
+    display: none;
+}
+.twitter-logo {
+    width: 24px;
+    height: 24px;
+    margin-right: 5px;
+    vertical-align: middle;
+    fill: #1DA1F2; /* Twitter blue */
+}
+
+.email-logo {
+    width: 24px;
+    height: 24px;
+    margin-right: 5px;
+    vertical-align: middle;
+    fill: #7C5CFF; /* Custom purple */
+}
+
+
+
+/* Add styles for dropdown arrows */
+.nav-links .dropdown-arrow {
+    display: inline-block;
+    margin-left: 5px;
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 4px solid black;
+}
+
+.file-upload {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 5px;
+    background: transparent;
+    border: none;
+}
+
+.file-upload-info {
+    font-size: 16px;
+    margin-top: 3px;
+}
+
+.run {
+    font-size: 20px;
+    border: 1px solid black;
+    background: transparent;
+    margin-top: 10px;
+    padding: 5px 10px;
+}
+
+.terminal {
+    position: relative;
+}
+
+.terminal p {
+    font-size: 20px;
+    position: absolute;
+    top: -25px;
+    right: 3px;
+}
+/* Add styles for terminal head part */
+.terminal-head {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #6e6e6e;
+    padding: 3px 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+/* Update .terminal-window styles */
+.terminal-window {
+    position: relative;
+    background-color: #1e1e1e;
+    color: #f5f5f5;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.terminal-buttons {
+    display: flex;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.terminal-buttons span {
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.terminal-buttons .close {
+    background-color: #CD4B4B;
+}
+
+.terminal-buttons .minimize {
+    background-color: #FFA028;
+}
+
+.terminal-buttons .expand {
+    background-color: #0087EC;
+}
+
+.save-log {
+    font-size: 20px;
+    border: 1px solid black;
+    background: transparent;
+    padding: 5px 10px;
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer hr {
+    border: 0;
+    border-top: 1px solid black;
+    margin-bottom: 10px;
+}
+
+.contact-info a {
+    font-size: 20px;
+    color: inherit;
+    text-decoration: none;
+    border: 1px solid black;
+    padding: 5px;
+    margin: 5px;
+}
+
+.contact-info a:hover {
+    color: white;
+    background-color: black;
+}

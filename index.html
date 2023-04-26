@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style.css">
+    <title>RustScan Results</title>
+</head>
+
+<body>
+    <h1>RustScan Results</h1>
+    <label for="api-key">API Key:</label>
+    <input type="text" id="api-key" placeholder="Enter your API key">
+    <button onclick="saveApiKey()">Save API Key</button>
+    <span id="api-key-status" class="status-dot"></span>
+    <br><br>
+    <label for="rustscan-args">RustScan Arguments:</label>
+    <input type="text" id="rustscan-args" placeholder="Enter RustScan arguments">
+    <button onclick="fetchRustScanResults()">Run RustScan</button>
+
+    <!-- Add a loading spinner -->
+    <div id="loading-spinner" style="display: none;">
+        <p>Loading...</p>
+        <div class="progress-bar">
+            <div id="progress-bar-fill" class="progress-bar-fill"></div>
+        </div>
+    </div>
+
+
+    <div class="terminal">
+        <pre>
+        </pre>
+    </div>
+
+    <script src="/static/main.js"></script>
+</body>
+
+</html>

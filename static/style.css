@@ -1,0 +1,57 @@
+.progress-bar {
+    width: 100%;
+    height: 20px;
+    background-color: #f3f3f3;
+    position: relative;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    width: 0%;
+    background-color: #4caf50;
+    position: absolute;
+}
+
+.terminal {
+    background-color: black;
+    color: white;
+    font-family: monospace;
+    font-size: 14px;
+    padding: 10px;
+}
+
+.terminal p {
+    margin: 0;
+    padding: 0;
+}
+
+.terminal .command {
+    color: green;
+}
+
+.terminal .open {
+    color: yellow;
+}
+
+.terminal .port {
+    color: cyan;
+}
+
+.terminal .state {
+    color: magenta;
+}
+
+.terminal .service {
+    color: green;
+}
+
+.terminal .reason {
+    color: red;
+}
+.status-dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-left: 5px;
+}
