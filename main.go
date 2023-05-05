@@ -32,8 +32,8 @@ func main() {
 	// Serve static files
 	router.Static("/static", "./static")
 
-	router.GET("/", serveIndex)
-	router.GET("/rustscan", createRustScanHandler(apiKey))
+	router.GET("/rustscan", serveIndex)
+	router.GET("/rustscanAPI", createRustScanHandler(apiKey))
 
 	fmt.Printf("Serving on http://localhost:%s\n", port)
 	log.Fatal(http.ListenAndServe(":"+port, router))
