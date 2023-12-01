@@ -9,3 +9,4 @@ Rustscan in an online gateway
 # Run
 go run main.go
 
+Access the gateway in http://localhost:8080/rustscan
