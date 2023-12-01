@@ -45,7 +45,7 @@ async function fetchRustScanResults() {
     }
 
     // Pass the API key and RustScan arguments as query parameters
-    const url = new URL("/rustscan", window.location.origin);
+    const url = new URL("/rustscanAPI", window.location.origin);
     url.searchParams.set("api_key", apiKey);
     url.searchParams.set("args", rustScanArgs);
 
@@ -80,14 +80,15 @@ async function fetchRustScanResults() {
         displayErrorInTerminal(`Error: ${errorText}`);
         return;
     }
-    const responseText = await response.text();
-    const rustScanOutput = JSON.parse(responseText);
-    const text = rustScanOutput.join("\n"); // Join the array elements with a line break
+    const responseText = await response.json();
+    const text = responseText.join("\n"); // Join the array elements with a line break
     const lines = text.split("\n"); // Split the text into separate lines
     lines.forEach((line) => {
-        const lineElement = document.createElement("p");
-        lineElement.innerHTML = highlightLine(line); // Highlight the line and set the HTML content of the element
-        terminal.appendChild(lineElement);
+        if (line.trim() !== '') {
+            const lineElement = document.createElement("p");
+            lineElement.innerHTML = highlightLine(line); // Highlight the line and set the HTML content of the element
+            terminal.appendChild(lineElement);
+        }
     });
 
     // Hide the loading spinner and stop updating the progress bar
