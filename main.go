@@ -157,7 +157,7 @@ func runRustScan(args string) ([]string, error) {
 		"--rm",
 		"--name",
 		containerName,
-		"rustscan",
+		"rustscan/rustscan:2.1.1",
 	}
 
 	if args != "" {
