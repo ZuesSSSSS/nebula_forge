@@ -1,5 +1,11 @@
 # nebula_forge
+Rustscan in an online gateway
+
+## Pre-req
+- Install docker
+- Install GoLang
 
 
-## Run
+# Run
 go run main.go
+
